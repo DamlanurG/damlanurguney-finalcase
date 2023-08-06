@@ -67,7 +67,7 @@ Controller katmanındaki apicontroller'da ise veritabanı okuma yazma işlemleri
 
 
 ## KULLANIM
-[https://guneyapartmani.com/] adresinde backend kısmında program çalışmaktadır.
+https://guneyapartmani.com/ adresinde backend kısmında program çalışmaktadır.
 
 Bu apide oldukça kullanılan HTTP metotlarının kullanım amaçları aşağıdaki gibidir :
 - HTTP GET : Sunucudan veri almak ve listelemek için kullanılır.
