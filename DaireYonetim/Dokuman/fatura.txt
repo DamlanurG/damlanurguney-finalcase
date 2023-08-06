@@ -1,0 +1,50 @@
+Fatura Listesi : (GET)
+https://localhost:44385/api/faturaApi
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Fatura Detay : (GET)
+https://localhost:44385/api/faturaApi/1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Fatura Ekleme : (POST)
+https://localhost:44385/api/faturaApi
+{
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 500,
+    "odendimi" : false
+}
+
+curl --location 'https://localhost:44385/api/faturaApi' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 500,
+    "odendimi" : false
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Fatura Güncelleme : (PUT)
+https://localhost:44385/api/faturaApi/1
+{
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 750,
+    "odendimi" : false
+}
+
+curl --location --request PUT 'https://localhost:44385/api/faturaApi/1' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 750,
+    "odendimi" : false
+}'

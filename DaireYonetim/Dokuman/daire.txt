@@ -1,0 +1,130 @@
+Daire Listesi : (GET)
+https://localhost:44385/api/daireApi
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Daire Detay : (GET)
+https://localhost:44385/api/daireApi/1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Daire Ekleme : (POST)
+https://localhost:44385/api/daireApi
+Data : 
+{
+    "blokAdi": "A4",
+    "bosmu": true,
+    "tipi": "4",
+    "bulunduguKat": 4,
+    "daireNo": 4,
+    "sahibiYadaKiraci": "sahibi"
+}
+
+curl --location 'https://localhost:44385/api/daireApi' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "blokAdi": "A4",
+    "bosmu": true,
+    "tipi": "4",
+    "bulunduguKat": 4,
+    "daireNo": 4,
+    "sahibiYadaKiraci": "sahibi"
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Daire Güncelleme : (PUT)
+https://localhost:44385/api/daireApi/1
+Data : 
+{
+	"blokAdi": "A4-2",
+	"bosmu": false,
+	"tipi": "4",
+	"bulunduguKat": 4,
+	"daireNo": 4,
+	"sahibiYadaKiraci": "kiracý"
+}
+
+curl --location --request PUT 'https://localhost:44385/api/daireApi/1' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "blokAdi": "A5-2",
+    "bosmu": false,
+    "tipi": "5",
+    "bulunduguKat": 5,
+    "daireNo": 5,
+    "sahibiYadaKiraci": "kiracý"
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+ Daire Silme : (DELETE)
+ https://localhost:44385/api/daireApi/1
+ 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aylýk Aidat Listesi : (GET)
+https://localhost:44385/api/aylikAidat
+Data : 
+{
+    "ay" : 1
+}
+
+curl --location --request GET 'https://localhost:44385/api/daireApi/aylikAidat' \
+--header 'Content-Type: application/json' \
+--data '{
+    "ay" : 1
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aylýk Ödenmemiþ Aidat Listesi : (GET)
+https://localhost:44385/api/aylikOdenmemisAidat
+Data : 
+{
+    "ay" : 1
+}
+
+curl --location --request GET 'https://localhost:44385/api/daireApi/aylikOdenmemisAidat' \
+--header 'Content-Type: application/json' \
+--data '{
+    "ay" : 1
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aylýk Fatura Listesi : (GET)
+https://localhost:44385/api/aylikFatura
+Data : 
+{
+    "ay" : 1
+}
+
+curl --location --request GET 'https://localhost:44385/api/daireApi/aylikFatura' \
+--header 'Content-Type: application/json' \
+--data '{
+    "ay" : 1
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aylýk Ödenmemiþ Fatura Listesi : (GET)
+https://localhost:44385/api/aylikOdenmemisFatura
+Data : 
+{
+    "ay" : 1
+}
+
+curl --location --request GET 'https://localhost:44385/api/daireApi/aylikOdenmemisFatura' \
+--header 'Content-Type: application/json' \
+--data '{
+    "ay" : 1
+}'

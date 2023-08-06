@@ -1,0 +1,31 @@
+Mesaj Listesi : (GET)
+https://localhost:44385/api/mesajApi
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Mesaj Detay : (GET)
+https://localhost:44385/api/mesajApi/1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Mesaj Ekleme : (POST)
+https://localhost:44385/api/mesajApi
+{
+    "kullanýcýID" : 3,
+    "metin" : "deneme"
+}
+
+curl --location 'https://localhost:44385/api/mesajApi' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "kullanýcýID" : 3,
+    "metin" : "deneme"
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Okunmamýþ Mesajlar : (GET)
+https://localhost:44385/api/mesajApi/okunmamisMesajlar

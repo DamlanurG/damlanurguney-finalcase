@@ -1,0 +1,50 @@
+Aidat Listesi : (GET)
+https://localhost:44385/api/aidatApi
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aidat Detay : (GET)
+https://localhost:44385/api/aidatApi/1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aidat Ekleme : (POST)
+https://localhost:44385/api/aidatApi
+{
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 500,
+    "odendimi" : false
+}
+
+curl --location 'https://localhost:44385/api/aidatApi' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 500,
+    "odendimi" : false
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Aidat Güncelleme : (PUT)
+https://localhost:44385/api/aidatApi/1
+{
+    "daireID" : 5,
+    "tutar" : 1000,
+    "ay" : 2,
+    "odendimi" : false
+}
+
+curl --location --request PUT 'https://localhost:44385/api/aidatApi/1' \
+--header 'Content-Type: application/json' \
+--data ' {
+    "daireID" : 5,
+    "ay" : 2,
+    "tutar" : 1000,
+    "odendimi" : false
+}'

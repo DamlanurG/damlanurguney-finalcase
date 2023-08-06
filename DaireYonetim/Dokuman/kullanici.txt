@@ -1,0 +1,147 @@
+Kullanýcý Listesi : (GET)
+https://localhost:44385/api/kullaniciApi
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Detay : (GET)
+https://localhost:44385/api/kullaniciApi/1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Ekleme : (POST)
+https://localhost:44385/api/kullaniciApi
+Data : 
+{
+    "adSoyad": "volkan demirel",
+    "tcNo": "789",
+    "email": "volkan@demirel.com",
+    "telefon": "0216",
+    "aracPlaka": "",
+    "daireID" : 1,
+    "sifre" : "321321"
+}
+
+curl --location 'https://localhost:44385/api/kullaniciApi' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+    "adSoyad": "volkan demirel",
+    "tcNo": "789",
+    "email": "volkan@demirel.com",
+    "telefon": "0216",
+    "aracPlaka": "",
+    "daireID" : 1,
+    "sifre" : "321321"
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Güncelleme : (PUT)
+https://localhost:44385/api/kullaniciApi/1
+Data : 
+{
+    "adSoyad": "volkan þanlý",
+    "tcNo": "321456",
+    "email": "serhat@akin2.com",
+    "telefon": "0216",
+    "aracPlaka": "34",
+    "daireID" : 5,
+    "sifre" : "123456"
+}
+
+curl --location --request PUT 'https://localhost:44385/api/kullaniciApi/1' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+    "adSoyad": "volkan þanlý",
+    "tcNo": "321456",
+    "email": "serhat@akin2.com",
+    "telefon": "0216",
+    "aracPlaka": "34",
+    "daireID" : 5,
+    "sifre" : "123456"
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Silme : (DELETE)
+https://localhost:44385/api/kullaniciApi/1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Giriþ : (GET)
+https://localhost:44385/api/kullaniciApi/giris
+Data : 
+{
+    "email" : "serhat@akin2.com",
+    "sifre" : "123456"
+}
+
+curl --location --request GET 'https://localhost:44385/api/kullaniciApi/giris' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+    "email" : "serhat@akin2.com",
+    "sifre" : "123456"
+}'
+ 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Daire Aidat : (GET)
+https://localhost:44385/api/kullaniciApi/daireAidat
+Data : 5
+
+curl --location --request GET 'https://localhost:44385/api/kullaniciApi/daireAidat' \
+--header 'Content-Type: application/json' \
+--data '5'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Daire Aidat Ödeme : (POST)
+https://localhost:44385/api/kullaniciApi/daireAidatOdeme
+Data : 
+{
+    "daire" : 5,
+    "ay" : 1
+}
+
+curl --location 'https://localhost:44385/api/kullaniciApi/daireAidatOdeme' \
+--header 'Content-Type: application/json' \
+--data '{
+    "daireID" : 5,
+    "ay" : 1
+}'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Daire Fatura : (GET)
+https://localhost:44385/api/kullaniciApi/daireFatura
+Data : 5
+
+curl --location --request GET 'https://localhost:44385/api/kullaniciApi/daireFatura' \
+--header 'Content-Type: application/json' \
+--data '5'
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Kullanýcý Daire Fatura Ödeme : (POST)
+https://localhost:44385/api/kullaniciApi/daireFaturaOdeme
+Data : 
+{
+    "daire" : 5,
+    "ay" : 1
+}
+
+
+curl --location 'https://localhost:44385/api/kullaniciApi/daireFaturaOdeme' \
+--header 'Content-Type: application/json' \
+--data '{
+    "daireID" : 5,
+    "ay" : 1
+}'
