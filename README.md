@@ -1,4 +1,6 @@
 # .NET, MİCROSOFT SQL SERVER VE POSTMAN KULLANARAK SİTE YÖNETİMİ APİ OLUŞTURMAK
+![55](https://github.com/DamlanurG/damlanurguney-finalcase/assets/138982566/8d579c9d-e140-47e7-bddc-5f526a86dfc0)
+
 _Bu projede bir site yönetiminin sitenin yöneticisi tarafından kolayca yapılması amaçlanmıştır. Yönetici yapılan apide daire ve kullanıcı bilgilerini, aidat ve fatura bilgilerini girebilir, görüntüleyebilir, güncelleyebilir, silebilir ve değiştirebilir._
 
 _Daire bilgileri şu şekildedir :_
@@ -20,7 +22,7 @@ _Aidat kısmında ise :_
 - _DaireID_
 - _Ay_
 - _Tutar_
-- _Ödendi mi(true/false olacak şekilde kullanılıyor.)_
+- _Ödendi mi(boolean olarak kullanılıyor.)_
   
 _bilgileri girilerek aidat ekleniyor. Eklendikten sonra listeleme ve güncelleme işlemleri yapılabiliyor._
 
@@ -28,7 +30,7 @@ _Fatura kısmında :_
 - _DaireID_
 - _Ay_
 - _Tutar_
-- _Ödendi mi(true/false olacak şekilde kullanılıyor.)_
+- _Ödendi mi(boolean olarak kullanılıyor.)_
   
 _bilgileri girilerek fatura ekleniyor. Eklendikten sonra listeleme ve güncelleme işlemleri yapılabiliyor._
 
