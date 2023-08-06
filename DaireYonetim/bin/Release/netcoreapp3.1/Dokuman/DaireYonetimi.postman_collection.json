@@ -1,0 +1,859 @@
+{
+	"info": {
+		"_postman_id": "387f09f8-dfb6-46b8-9a92-29a7b595e5aa",
+		"name": "DaireYonetimi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10839033"
+	},
+	"item": [
+		{
+			"name": "Daire",
+			"item": [
+				{
+					"name": "Daire Listesi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daire Detay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/5",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daire Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blokAdi\": \"A4\",\r\n    \"bosmu\": true,\r\n    \"tipi\": \"4\",\r\n    \"bulunduguKat\": 4,\r\n    \"daireNo\": 4,\r\n    \"sahibiYadaKiraci\": \"sahibi\"\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daire Güncelleme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blokAdi\": \"A4-2\",\r\n    \"bosmu\": true,\r\n    \"tipi\": \"4\",\r\n    \"bulunduguKat\": 4,\r\n    \"daireNo\": 4,\r\n    \"sahibiYadaKiraci\": \"sahibi\"\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/11",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daire Silme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/13",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aylık Aidat Listesi",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ay\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/aylikAidat",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"aylikAidat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aylık Fatura Listesi",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ay\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/aylikFatura",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"aylikFatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aylık Ödenmemiş Aidat Listesi",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ay\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/aylikOdenmemisAidat",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"aylikOdenmemisAidat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aylık Ödenmemiş Fatura Listesi",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ay\" : 2\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/daireApi/aylikOdenmemisFatura",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"daireApi",
+								"aylikOdenmemisFatura"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kullanıcı",
+			"item": [
+				{
+					"name": "Kullanıcı Listesi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Detay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/3",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adSoyad\": \"volkan demirel\",\r\n    \"tcNo\": \"789\",\r\n    \"email\": \"volkan@demirel.com\",\r\n    \"telefon\": \"0216\",\r\n    \"aracPlaka\": \"\",\r\n    \"daireID\" : 1,\r\n    \"sifre\" : \"321321\"\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Güncelleme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adSoyad\": \"volkan şanlı\",\r\n    \"tcNo\": \"321456\",\r\n    \"email\": \"serhat@akin2.com\",\r\n    \"telefon\": \"0216\",\r\n    \"aracPlaka\": \"34\",\r\n    \"daireID\" : 5,\r\n    \"sifre\" : \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/6",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Silme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/6",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Giriş",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"serhat@akin2.com\",\r\n    \"sifre\" : \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/giris",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"giris"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Daire Aidat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "5"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/daireAidat",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"daireAidat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Daire Aidat Ödeme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"daireID\" : 5,\r\n    \"ay\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/daireAidatOdeme",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"daireAidatOdeme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Daire Fatura",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "5"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/daireFatura",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"daireFatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Daire Fatura Ödeme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"daireID\" : 5,\r\n    \"ay\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/kullaniciApi/daireFaturaOdeme",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"kullaniciApi",
+								"daireFaturaOdeme"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aidat",
+			"item": [
+				{
+					"name": "Aidat Listesi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/aidatApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"aidatApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aidat Detay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/aidatApi/5",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"aidatApi",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aidat Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"daireID\" : 5,\r\n    \"ay\" : 2,\r\n    \"tutar\" : 500,\r\n    \"odendimi\" : false\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/aidatApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"aidatApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aidat Güncelleme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"daireID\" : 5,\r\n    \"ay\" : 2,\r\n    \"tutar\" : 750,\r\n    \"odendimi\" : false\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/aidatApi/2",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"aidatApi",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fatura",
+			"item": [
+				{
+					"name": "Fatura Listesi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/faturaApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"faturaApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fatura Detay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/faturaApi/5",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"faturaApi",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fatura Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"daireID\" : 5,\r\n    \"ay\" : 2,\r\n    \"tutar\" : 500,\r\n    \"odendimi\" : false\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/faturaApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"faturaApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fatura Güncelleme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"daireID\" : 5,\r\n    \"ay\" : 2,\r\n    \"tutar\" : 1000,\r\n    \"odendimi\" : false\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/faturaApi/2",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"faturaApi",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mesaj",
+			"item": [
+				{
+					"name": "Mesaj Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"kullanıcıID\" : 3,\r\n    \"metin\" : \"deneme\"\r\n}"
+						},
+						"url": {
+							"raw": "https://guneyapartmani.com/api/mesajApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"mesajApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mesaj Listesi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/mesajApi",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"mesajApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mesaj Detay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/mesajApi/1",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"mesajApi",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Okunmamış Mesajlar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://guneyapartmani.com/api/mesajApi/okunmamisMesajlar",
+							"protocol": "https",
+							"host": [
+								"guneyapartmani",
+								"com"
+							],
+							"path": [
+								"api",
+								"mesajApi",
+								"okunmamisMesajlar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
